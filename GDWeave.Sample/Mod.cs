@@ -1,4 +1,6 @@
-﻿namespace GDWeave.Sample;
+﻿using GDWeave;
+
+namespace GDWeave.Sample;
 
 public class Mod : IMod {
     public Config Config;
