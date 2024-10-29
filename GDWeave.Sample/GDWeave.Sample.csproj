@@ -23,13 +23,13 @@
         </PropertyGroup>
 
         <Exec
-                Command="xcopy /Y /I &quot;$(TargetDir)&quot; &quot;$(GDWeavePath)/mods/$(AssemblyName)&quot;"
-                Condition="'$(IsWindows)' == 'true'" 
+            Command="xcopy /Y /I &quot;$(TargetDir)&quot; &quot;$(GDWeavePath)/mods/$(AssemblyName)&quot;"
+            Condition="'$(IsWindows)' == 'true'"
         />
 
         <Exec
-                Command="cp -r $(TargetDir) '$(GDWeavePath)/mods/$(AssemblyName)/'"
-                Condition="'$(IsLinux)' == 'true'" 
+            Command="cp -r $(TargetDir) '$(GDWeavePath)/mods/$(AssemblyName)/'"
+            Condition="'$(IsLinux)' == 'true'"
         />
     </Target>
 </Project>
