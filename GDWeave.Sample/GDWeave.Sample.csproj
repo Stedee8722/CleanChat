@@ -25,5 +25,5 @@
                 SourceFiles="@(_SourceFiles)"
                 DestinationFolder="$(GDWeavePath)/mods/$(AssemblyName)"
         />
-    </Target
+    </Target>
 </Project>
