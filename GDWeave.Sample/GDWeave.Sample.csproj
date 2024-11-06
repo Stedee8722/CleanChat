@@ -17,19 +17,13 @@
     </ItemGroup>
 
     <Target Name="PostBuild" AfterTargets="PostBuildEvent" Condition="'$(GDWeavePath)' != ''">
-        <PropertyGroup>
-            <IsWindows Condition="'$([System.Runtime.InteropServices.RuntimeInformation]::IsOSPlatform($([System.Runtime.InteropServices.OSPlatform]::Windows)))'">true</IsWindows>
-            <IsLinux Condition="'$([System.Runtime.InteropServices.RuntimeInformation]::IsOSPlatform($([System.Runtime.InteropServices.OSPlatform]::Linux)))'">true</IsLinux>
-        </PropertyGroup>
+        <ItemGroup>
+            <_SourceFiles Include="$(OutDir)\**\*.*"/>
+        </ItemGroup>
 
-        <Exec
-            Command="xcopy /Y /I &quot;$(TargetDir)&quot; &quot;$(GDWeavePath)/mods/$(AssemblyName)&quot;"
-            Condition="'$(IsWindows)' == 'true'"
+        <Copy
+                SourceFiles="@(_SourceFiles)"
+                DestinationFolder="$(GDWeavePath)/mods/$(AssemblyName)"
         />
-
-        <Exec
-            Command="cp -r $(TargetDir) '$(GDWeavePath)/mods/$(AssemblyName)/'"
-            Condition="'$(IsLinux)' == 'true'"
-        />
-    </Target>
+    </Target
 </Project>
