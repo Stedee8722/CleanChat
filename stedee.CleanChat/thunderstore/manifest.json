@@ -1,0 +1,9 @@
+﻿{
+  "dependencies": [
+    "NotNet-GDWeave-2.0.14"
+  ],
+  "description": "Lil mod to make chat cleaner by compressing the same messages",
+  "name": "CleanChat",
+  "version_number": "0.0.1",
+  "website_url": ""
+}

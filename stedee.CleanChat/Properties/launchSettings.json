@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "stedee.CleanChat": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "GDWEAVE_CONSOLE": "1"
+      }
+    }
+  }
+}
