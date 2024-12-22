@@ -13,7 +13,7 @@ internal class SteamNetworkScript : IScriptMod {
             t => t is IdentifierToken {Name:"final_text"},
             t => t.Type is TokenType.OpAssign,
             t => t is ConstantToken {Value: StringVariant {Value: ""}},
-            t => t.Type is TokenType.Newline,
+            t => t.Type is TokenType.Newline
         ], allowPartialMatch: false);
 
         // GAMECHAT = GAMECHAT + msg
@@ -23,7 +23,7 @@ internal class SteamNetworkScript : IScriptMod {
             t => t is IdentifierToken {Name:"GAMECHAT"},
             t => t.Type is TokenType.OpAdd,
             t => t is IdentifierToken {Name:"msg"},
-            t => t.Type is TokenType.Newline && t.AssociatedData == 2,
+            t => t.Type is TokenType.Newline && t.AssociatedData == 2
         ], allowPartialMatch: false);
 
         // LOCAL_GAMECHAT = LOCAL_GAMECHAT + msg
@@ -60,7 +60,7 @@ internal class SteamNetworkScript : IScriptMod {
                 yield return new ConstantToken(new StringVariant(""));
                 yield return new Token(TokenType.Newline, 2);
 
-                //for i in range(GAMECHAT_COLLECTIONS.size(), 0, -1):
+                // for i in range(GAMECHAT_COLLECTIONS.size(), 0, -1):
                 yield return new Token(TokenType.CfFor);
                 yield return new IdentifierToken("i");
                 yield return new Token(TokenType.OpIn);
