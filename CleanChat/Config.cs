@@ -3,4 +3,5 @@
 namespace CleanChat;
 
 public class Config {
+    [JsonInclude] public bool Enabled = true;
 }
