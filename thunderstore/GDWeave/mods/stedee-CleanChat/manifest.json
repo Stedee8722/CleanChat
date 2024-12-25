@@ -1,10 +1,11 @@
 {
   "Id": "stedee.CleanChat",
-  "AssemblyPath": "stedee.CleanChat.dll",
+  "AssemblyPath": "CleanChat.dll",
+  "PackPath": "CleanChat.pck",
   "Metadata": {
     "Name": "CleanChat",
     "Author": "stedee",
-    "Version": "0.0.3",
+    "Version": "0.0.4",
     "Description": "Test mod to make chat cleaner"
   }
 }

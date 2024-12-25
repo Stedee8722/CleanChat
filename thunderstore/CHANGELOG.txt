@@ -1,7 +1,0 @@
-## 0.0.1
-
-* Release mod! Hope it works TwT
-
-## 0.0.3
-
-* Everything should be fine now
